@@ -1,4 +1,5 @@
 local Players = game:GetService("Players");
+local RunService = game:GetService("RunService");
 local IYMouse = Players.LocalPlayer:GetMouse(); 
 
 function TpPlayer(CFPos)

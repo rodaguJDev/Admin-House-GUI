@@ -1,4 +1,7 @@
 -- Calling from AH Network
+local ReplicatedStorage = game:GetService("ReplicatedStorage");
+local Players = game:GetService("Players");
+
 function CallF3X(...)
     local Backpack = Players.LocalPlayer.Backpack;
     local ToolInChar = Players.LocalPlayer.Character:FindFirstChild("Building Tools");

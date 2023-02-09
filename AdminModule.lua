@@ -1,3 +1,7 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage");
+local RunService = game:GetService("RunService");
+local Players = game:GetService("Players");
+
 IsPerm = ReplicatedStorage.Network:WaitForChild("IsPerm", 5):InvokeServer() or false;
 
 
