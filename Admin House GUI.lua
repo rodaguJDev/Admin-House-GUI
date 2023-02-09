@@ -45,9 +45,6 @@ AdminTab:AddButton({
     Callback = loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))
 });
 
-local KeepAdminEvent;
-local plrAdminName = Players.LocalPlayer.Name .. "'s admin";
-
 if not IsPerm then 
     AdminTab:AddToggle({
         Name = 'Keep Admin',

@@ -3,13 +3,13 @@ local RunService = game:GetService("RunService");
 local Players = game:GetService("Players");
 
 IsPerm = ReplicatedStorage.Network:WaitForChild("IsPerm", 5):InvokeServer() or false;
+local plrAdminName = Players.LocalPlayer.Name .. "'s admin";
 
 
 function GetAdmin()
     local HasAdmin
     if IsPerm then return; end
 
-    local plrAdminName = Players.LocalPlayer.Name .. "'s admin";
     local currentCFrame = Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart", math.huge).CFrame;
     local AdminPadPos = workspace.SecureParts.AdminPads:FindFirstChild("Touch to get admin").Head.CFrame;
 
@@ -29,7 +29,6 @@ function runc(cmd, getadmin)
     assert(typeof(getadmin) == "boolean", "Incorrect 'runc' usage");
     assert(typeof(cmd) == "string", "Incorrect 'runc' usage");
 
-    local plrAdminName = Players.LocalPlayer.Name .. "'s admin";
     HasAdmin = if IsPerm or workspace.SecureParts.AdminPads:FindFirstChild(plrAdminName) then true else false
     if not HasAdmin and getadmin then
         GetAdmin();
@@ -38,6 +37,7 @@ function runc(cmd, getadmin)
     Players:Chat(cmd);
 end
 
+local KeepAdminEvent;
 function KeepAdmin(state) -- This is used for the toggle in the GUI
     local currentCFrame
     local AdminPadPos
