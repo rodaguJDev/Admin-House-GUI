@@ -9,10 +9,9 @@ local RunService = game:GetService("RunService");
 local TeleportService = game:GetService("TeleportService");
 local HttpService = game:GetService("HttpService");
 
-local PlayerModuleURL = '';
-local AdminModuleURL = '';
-local NetworkModuleURL = '';
-local InstanceModuleURL = '';
+local PlayerModuleURL = 'https://raw.githubusercontent.com/rodaguJDev/Admin-House-GUI/main/PlayerModule.lua';
+local AdminModuleURL = 'https://raw.githubusercontent.com/rodaguJDev/Admin-House-GUI/main/AdminModule.lua';
+local InstanceModuleURL = 'https://raw.githubusercontent.com/rodaguJDev/Admin-House-GUI/main/InstanceModule.lua';
 
 local HttpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request;
 local AntiPlayerFilePath = 'AHG_Settings/AntiPlayer.txt';
