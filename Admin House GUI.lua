@@ -16,7 +16,7 @@ local HttpRequest = (syn and syn.request) or (http and http.request) or http_req
 local AntiPlayerFilePath = 'AHG_Settings/AntiPlayer.txt';
 
 -- Initiate Libraries
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))();
+OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))();
 local Window = OrionLib:MakeWindow(
     {
         Name = "Admin House GUI",
