@@ -17,7 +17,7 @@ local AntiPlayerFilePath = 'AHG_Settings/AntiPlayer.txt';
 
 -- Initiate Libraries
 OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))();
-local Window = OrionLib:MakeWindow(
+Window = OrionLib:MakeWindow(
     {
         Name = "Admin House GUI",
         IntroEnabled = false,
